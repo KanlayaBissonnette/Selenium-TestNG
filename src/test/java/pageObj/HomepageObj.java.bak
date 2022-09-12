@@ -1,0 +1,150 @@
+package pageObj;
+
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+import Utilities.CommonMethods;
+import Utilities.ConfigReader;
+import Utilities.Driver;
+
+public class HomepageObj extends CommonMethods {
+	 
+	public HomepageObj() {
+		PageFactory.initElements(Driver.getDriver(), this);
+	}
+	
+<<<<<<< Updated upstream
+	@FindBy(xpath ="//*[@id=\"js-panelUserInfo\"]/span[2]")
+	public WebElement signinTab;
+	
+	@FindBy(xpath = "//*[@id=\"js-panelUserInfo\"]/div/div/div/a[2]")
+	public WebElement registerBtn;
+	
+	@FindBy(xpath ="//*[@id=\"js-panelUserInfo\"]/div/div/div/a[1]")
+	public WebElement signInBtn;
+	
+	
+	
+	public void hoverSigninTab() {
+		CommonMethods.hover(signinTab);
+			
+	}
+	
+	
+	public void clickRegisterBtn() {
+		registerBtn.click();
+	}
+=======
+	
+	@FindBy (xpath = "//i[@class='icon-top1']")
+	public WebElement arrowUpIcon;
+	
+	@FindBy (xpath = "//i[@class='icon-fb']")
+	public WebElement facebookIcon;
+	
+	@FindBy (xpath = "//li[@class='headNav_item '][1]")
+	public WebElement superDealsTab;
+	
+	@FindBy (xpath = "//li[@class='headNav_item '][2]")
+	public WebElement appOnlyTab;
+	
+	@FindBy (xpath = "//li[@class='headNav_item '][3]")
+	public WebElement newArrivalsTab;
+	
+	@FindBy (xpath = "//*[contains(@class,'indexBanner_pageItem')]")
+	public List<WebElement> sliders;
+	
+	
+	public void clickArrowUpIcon() {
+		CommonMethods.scrollByPixel(1500);
+		CommonMethods.click(arrowUpIcon);
+	}
+	
+	public void clickFacebookIcon() {
+		CommonMethods.click(facebookIcon);
+	}
+	
+	public void clickSuperDealsTab() {
+		CommonMethods.click(superDealsTab);
+	}
+	
+	public void clickAppOnlyTab() {
+		CommonMethods.click(appOnlyTab);
+	}
+	
+	public void clicknewArrivalsTab() {
+		CommonMethods.click(newArrivalsTab);
+	}
+	
+	public void verifyFiveSliders() { 
+		Assert.assertTrue(sliders.size() == Integer.parseInt(ConfigReader.getProperties("sliderSize")));
+	}
+	
+	public void verifyNavBar() {
+		hp.clickSuperDealsTab();
+		superD.verifySuperDealsPage();
+		hp.clickAppOnlyTab();
+		app.verifyAppOnlyPage();
+		hp.clicknewArrivalsTab();
+		newarr.verifyNewArrivalsPage();
+	}
+	
+>>>>>>> Stashed changes
+
+	@FindBy (xpath = "//i[@class='icon-top1']")
+	public WebElement arrowUpIcon;
+	
+	@FindBy (xpath = "//i[@class='icon-fb']")
+	public WebElement facebookIcon;
+	
+	@FindBy (xpath = "//li[@class='headNav_item '][1]")
+	public WebElement superDealsTab;
+	
+	@FindBy (xpath = "//li[@class='headNav_item '][2]")
+	public WebElement appOnlyTab;
+	
+	@FindBy (xpath = "//li[@class='headNav_item '][3]")
+	public WebElement newArrivalsTab;
+	
+	@FindBy (xpath = "//*[contains(@class,'indexBanner_pageItem')]")
+	public List<WebElement> sliders;
+	
+	
+	public void clickArrowUpIcon() {
+		CommonMethods.scrollByPixel(1500);
+		CommonMethods.click(arrowUpIcon);
+	}
+	
+	public void clickFacebookIcon() {
+		CommonMethods.click(facebookIcon);
+	}
+	
+	public void clickSuperDealsTab() {
+		CommonMethods.click(superDealsTab);
+	}
+	
+	public void clickAppOnlyTab() {
+		CommonMethods.click(appOnlyTab);
+	}
+	
+	public void clicknewArrivalsTab() {
+		CommonMethods.click(newArrivalsTab);
+	}
+	
+	public void verifyFiveSliders() { 
+		Assert.assertTrue(sliders.size() == Integer.parseInt(ConfigReader.getProperties("sliderSize")));
+	}
+	
+	public void verifyNavBar() {
+		hp.clickSuperDealsTab();
+		superD.verifySuperDealsPage();
+		hp.clickAppOnlyTab();
+		app.verifyAppOnlyPage();
+		hp.clicknewArrivalsTab();
+		newarr.verifyNewArrivalsPage();
+	}
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Regression(failed)">
+    <classes>
+      <class name="test.LoginTesting">
+        <methods>
+          <include name="TC001_signinValidEmailValidPassword"/>
+          <include name="closeBrowser"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- test.LoginTesting -->
+      <class name="test.AppOnlyFunctionalityTesting">
+        <methods>
+          <include name="setUp"/>
+          <include name="AppOnlyFunctionality_001_AppOnlyButtonClickable"/>
+          <include name="TearDown"/>
+          <include name="AppOnlyFunctionality_003_CellphonesAndAccessories"/>
+        </methods>
+      </class> <!-- test.AppOnlyFunctionalityTesting -->
+      <class name="test.HomepageFunctionalityTesting">
+        <methods>
+          <include name="setUp"/>
+          <include name="destroy"/>
+          <include name="HomePage_TC002_HomePageFunctionality"/>
+        </methods>
+      </class> <!-- test.HomepageFunctionalityTesting -->
+      <class name="test.SuperDealFunctionalityTesting">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="setUp"/>
+          <include name="verifyItemDiscount"/>
+          <include name="VerifyComingSoonSaleItemButton"/>
+        </methods>
+      </class> <!-- test.SuperDealFunctionalityTesting -->
+    </classes>
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [Suite] -->
